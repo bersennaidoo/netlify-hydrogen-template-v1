@@ -1,9 +1,10 @@
 [build]
-  command = "npm run build"
+  command = "yarn build"
   publish = "dist/client"
+  NETLIFY_USE_YARN = "true"
 
 [dev]
-  command = "npm run dev"
+  command = "yarn dev"
 
 # Set immutable caching for static files, because they have fingerprinted filenames
 [[headers]]
