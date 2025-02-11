@@ -47,8 +47,5 @@
     "typescript": "^5.2.2",
     "vite": "^5.4.3",
     "vite-tsconfig-paths": "^5.0.1"
-  },
-  "engines": {
-    "node": ">=20"
   }
 }
