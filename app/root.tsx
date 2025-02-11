@@ -13,6 +13,8 @@ import {
 } from '@remix-run/react';
 import favicon from '~/assets/favicon.svg';
 import resetStyles from '~/styles/reset.css?url';
+import robotoCss from '~/styles/robotowebfonts/stylesheet.css?url';
+import bootstrapCss from '~/styles/bootstrap/bootstrap-custom.css?url';
 import appStyles from '~/styles/app.css?url';
 import {PageLayout} from '~/components/PageLayout';
 import {FOOTER_QUERY, HEADER_QUERY} from '~/lib/fragments';
@@ -138,6 +140,8 @@ export function Layout({children}: {children?: React.ReactNode}) {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
+        <link rel='stylesheet' href={robotoCss}></link>
+        <link rel='stylesheet' href={bootstrapCss}></link>
       </head>
       <body>
         {data ? (
@@ -152,6 +156,7 @@ export function Layout({children}: {children?: React.ReactNode}) {
           children
         )}
         <ScrollRestoration nonce={nonce} />
+        <script defer src='/js/bootstrap.bundle.js'></script>
         <Scripts nonce={nonce} />
       </body>
     </html>

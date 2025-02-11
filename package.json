@@ -10,7 +10,10 @@
     "dev": "shopify hydrogen dev --codegen",
     "lint": "eslint --no-error-on-unmatched-pattern --ext .js,.ts,.jsx,.tsx .",
     "preview": "netlify serve",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "ntl:dev": "netlify  dev --framework='#static'",
+    "sass": "sass --watch app/:app/"
+
   },
   "prettier": "@shopify/prettier-config",
   "dependencies": {
@@ -47,5 +50,8 @@
     "typescript": "^5.2.2",
     "vite": "^5.4.3",
     "vite-tsconfig-paths": "^5.0.1"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
